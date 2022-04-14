@@ -89,6 +89,13 @@ header {
     color: white;
     margin: 45px;
     left: 0 auto;
+    cursor: pointer;
+}
+
+.section1 div:hover {
+    transform: scale(1.1);
+    transition-property: all;
+    transition-duration: .3s;
 }
 
 .section1 p {
@@ -130,8 +137,15 @@ header {
     margin-right: 29px;
     width: 150px;
     height: 350px;
+    cursor: pointer;
 }
 /* No puedo hacer que todas sus posiciones sean a la misma altura */
+
+.libro:hover {
+    transform: scale(1.06);
+    transition-property: all;
+    transition-duration: .3s;
+}
 
 .spantitulo {
     position: relative;
@@ -212,8 +226,15 @@ header {
     color: #2abdbb;
 }
 
+.vertodobutton:hover { 
+    transform: scale(1.2);
+    transition-property: all;
+    transition-duration: .3s;
+}
+
 footer {
-    background-color: rgb(54,57,57);
+    background-color: black;
+    background-image: linear-gradient(black, rgb(33, 57, 68));;
     bottom: 0;
     display: flex;
     justify-content: space-between;
@@ -225,7 +246,7 @@ footer {
 
 footer h3 {
     text-align: center;
-    color: white;
+    color: rgb(212, 209, 209);
     margin-top: 20px;
     margin-bottom: 10px;
     padding-top: 10px;
@@ -260,7 +281,7 @@ footer h3 {
 }
 
 .footer-links ul li a {
-    color: white;
+    color: rgb(212, 209, 209);
     display: block;
     border-bottom: 1px solid rgba(255,255,255,0.1);
     text-decoration: none;
@@ -270,6 +291,8 @@ footer h3 {
 
 .footer-links ul li a:hover {
     border-bottom: 1px solid white;
+    color: white;
+    transition: all .3s ease;
 }
 
 .footer-right-content {
@@ -278,6 +301,7 @@ footer h3 {
     display: block;
     align-items: flex-end;
     justify-content: space-between;
+    color: rgb(212, 209, 209);
 }
 
 .payment-methods {
@@ -350,6 +374,7 @@ form select, textarea {
     width: 100px;
     margin-right: 20px;
     display: inline-block;
+    cursor: pointer;
 }
 
 .subtitulo
@@ -444,6 +469,12 @@ form select, textarea {
     font-weight: bold;
     box-shadow: none;
     display: inline-block;
+}
+
+.filter-button:hover {
+    transform: scale(1.06);
+    transition-property: all;
+    transition: .3s;
 }
 
 .vendido {
