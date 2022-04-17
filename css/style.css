@@ -10,7 +10,7 @@ body {
     overflow-x: hidden;
 }
 
-.body-index {
+.content-fluid {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas: 
@@ -37,43 +37,14 @@ header {
     width: auto;
 }
 
-#navegador {
-    background-color: rgb(54,57,57);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: center;
-    text-align: center;
-}
-
-#navegador ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-#navegador ul li {
-    display: inline-block;
-    /* De esta forma mostramos el navegador con los hipervinculos horizontales */
-    font-family:   'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
-#navegador ul li a {
-    color: white;
-    text-decoration: none;
-    /* Sacamos el subrayado de los hipervinculos */
-    padding: 10px;
-    display: block;
-}
-
-#navegador ul li a:hover {
+nav ul li a:hover {
     background-color: black;
 }
 /* Para que le de background cuando pases el mouse por encima */
 
-#navegador ul li img {
+nav img {
     width: 150px;
-    height: 35px;
+    height: 40px;
 }
 
 .section1 {
@@ -108,10 +79,11 @@ header {
     background-color: #2abdbb;
     border: solid 2px white;
     border-radius: 2px;
-    width: 100px;
+    width: 120px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    height: 20px;
 }
 
 .section2 {
@@ -169,10 +141,12 @@ header {
     background-color: #2abdbb;
     border: solid 2px white;
     border-radius: 2px;
-    width: 100px;
+    width: 125px;
+    height: 20px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    font-size: small;
 }
 
 .section3 {
@@ -192,10 +166,12 @@ header {
     background-color: #2abdbb;
     border: solid 2px white;
     border-radius: 2px;
-    width: 100px;
+    width: 125px;
+    height: 20px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    font-size: small;
 }
 
 .vertododiv {
