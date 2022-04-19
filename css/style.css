@@ -22,7 +22,7 @@ body {
     "footer footer";
 }
 
-.body-vendido {
+.content-fluid-vendido {
     display: grid;
     grid-template-columns: 300px 2fr;
     grid-template-areas: 
@@ -423,8 +423,8 @@ form select, textarea {
 }
 
 .palabra {
-    width: 90%;
-    height: 15px;
+    width: 100%;
+    height: 35px;
     margin-top: 10px;
 }
 
@@ -461,6 +461,7 @@ form select, textarea {
 .vendido .libro {
     display: inline-block;
     margin-right: 35px;
+    margin-bottom: 30px;
     width: 130px;
     height: 350px;
 }
