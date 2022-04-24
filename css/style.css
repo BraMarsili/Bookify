@@ -127,7 +127,7 @@ nav img {
     background-color:#2abdbb;
     content: '';
     position: absolute;
-    width: 1125px;
+    width: 86vw;
     height: 25%;
     bottom: -25px;
     left: 0;
@@ -216,7 +216,7 @@ footer {
     justify-content: space-between;
     flex-wrap: wrap;
     box-sizing: border-box;
-    height: 200px;
+    height: auto;
     width: auto;
 }
 
@@ -234,9 +234,18 @@ footer h3 {
 }
 
 .footer-left-content {
-    display: flex;
+    display: block;
     float: left;
     margin-left: 20px;
+}
+
+.footer-left-content div{
+    margin-top: 30px ;
+}
+
+.footer-left-content img {
+    width: 200px;
+    height: 50px;
 }
 
 .footer-links {
@@ -507,7 +516,7 @@ form select, textarea {
     }
 
     .body-index .spantitulo::after {
-        width: 425px;
+        width: 86vw;
     }
 
     .section3 {
@@ -589,7 +598,7 @@ form select, textarea {
     }
 
     .body-index .spantitulo::after {
-        width: 792px;
+        width: 86vw;
     }
 
     .section3 {
