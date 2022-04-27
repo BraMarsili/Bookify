@@ -1,11 +1,13 @@
+@import "colores";
+
 * {
     margin: 0;
     padding: 0;
 }
 
 body {
-    background-color: black;
-    color: white;
+    background-color: $primario;
+    color: $secundario;
     width: auto;
     overflow-x: hidden;
 }
@@ -38,7 +40,7 @@ header {
 }
 
 nav ul li a:hover {
-    background-color: black;
+    background-color: $primario;
 }
 /* Para que le de background cuando pases el mouse por encima */
 
@@ -55,7 +57,7 @@ nav img {
     width: auto;
     div {
         display: inline-block;
-        color: white;
+        color: $secundario;
         margin: 45px;
         left: 0 auto;
         cursor: pointer;
@@ -71,8 +73,8 @@ nav img {
     }
     button {
         cursor: pointer;
-        background-color: #2abdbb;
-        border: solid 2px white;
+        background-color: $terciario;
+        border: solid 2px $secundario;
         border-radius: 2px;
         width: 120px;
         display: inline-flex;
@@ -93,8 +95,8 @@ nav img {
     }
     button {
         cursor: pointer;
-        background-color: #2abdbb;
-        border: solid 2px white;
+        background-color: $terciario;
+        border: solid 2px $secundario;
         border-radius: 2px;
         width: 125px;
         height: 20px;
@@ -135,7 +137,7 @@ nav img {
 .spantitulo {
     position: relative;
     &::after {
-        background-color:#2abdbb;
+        background-color:$terciario;
         content: '';
         position: absolute;
         width: 86vw;
@@ -159,8 +161,8 @@ nav img {
     }
     button {
         cursor: pointer;
-        background-color: #2abdbb;
-        border: solid 2px white;
+        background-color: $terciario;
+        border: solid 2px $secundario;
         border-radius: 2px;
         width: 125px;
         height: 20px;
@@ -181,18 +183,18 @@ nav img {
         width: 100px;
         height: 30px;
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        background-color: black;
+        background-color: $primario;
         font-size: 15px;
         align-items: center;
         justify-content: center;
         font-weight: bolder;
         cursor: pointer;
         text-transform: uppercase;
-        border: solid 2px #2abdbb;
+        border: solid 2px $terciario;
         border-radius: 2px;
         a {
             text-decoration: none;
-            color: #2abdbb;
+            color: $terciario;
         }
         &:hover {
             transform: scale(1.2);
@@ -203,8 +205,8 @@ nav img {
 }
 
 .main-footer {
-    background-color: black;
-    background-image: linear-gradient(black, rgb(33, 57, 68));;
+    background-color: $primario;
+    background-image: linear-gradient($primario, rgb(33, 57, 68));;
     bottom: 0;
     display: flex;
     justify-content: space-between;
@@ -251,8 +253,8 @@ nav img {
                         background-color: transparent;
                         box-sizing: border-box;
                         &:hover {
-                            border-bottom: 1px solid white;
-                            color: white;
+                            border-bottom: 1px solid $secundario;
+                            color: $secundario;
                             transition: all .3s ease;
                         }
                     }
@@ -350,7 +352,7 @@ nav img {
         padding: .5rem 1rem;
         margin: .5rem;
         background-color: rgb(54,57,57);
-        box-shadow: 0.1rem 0.1rem 0.2rem white;
+        box-shadow: 0.1rem 0.1rem 0.2rem $secundario;
         margin-left: 0;
         box-sizing: border-box;
         .aside-content {
@@ -375,11 +377,11 @@ nav img {
                         padding: 6px 12px;
                         font-size: 14px;
                         line-height: 1.5;
-                        color: black;
-                        background-color: white;
-                        border: 1px solid white;
+                        color: $primario;
+                        background-color: $secundario;
+                        border: 1px solid $secundario;
                         border-radius: 0;
-                        box-shadow: inset 0 1px 1px white;
+                        box-shadow: inset 0 1px 1px $secundario;
                     }
                     .palabra {
                         width: 100%;
@@ -393,7 +395,7 @@ nav img {
                         padding: 0 1.7rem;
                         border: 0;
                         margin: 0;
-                        background: #2abdbb;
+                        background: $terciario;
                         color: #fff;
                         text-decoration: none;
                         text-align: center;
