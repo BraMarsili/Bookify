@@ -1,5 +1,16 @@
 @import "colores";
 
+@mixin tamanio ($anchor, $altura) {
+    width: $anchor;
+    height: $altura;
+}
+
+$estilos: (
+    cursor: pointer,
+    centro: center,
+    negrita: bolder
+);
+
 * {
     margin: 0;
     padding: 0;
@@ -45,14 +56,13 @@ nav ul li a:hover {
 /* Para que le de background cuando pases el mouse por encima */
 
 nav img {
-    width: 150px;
-    height: 40px;
+    @include tamanio (150px, 40px);
 }
 
 .section1 {
     background-image: url(../assets/img/Section\ 1\ fondo\ index\ 2.JPG);
     background-size: cover;
-    text-align: center;
+    text-align: map-get($estilos, centro);
     grid-area: section1;
     width: auto;
     div {
@@ -60,7 +70,7 @@ nav img {
         color: $secundario;
         margin: 45px;
         left: 0 auto;
-        cursor: pointer;
+        cursor: map-get($estilos , cursor );
         &:hover {
             transform: scale(1.1);
             transition-property: all;
@@ -68,19 +78,18 @@ nav img {
         }
     }
     p {
-        font-weight: bolder;
+        font-weight: map-get($estilos, negrita);
         margin: 5px;
     }
     button {
-        cursor: pointer;
+        cursor: map-get($estilos , cursor );
         background-color: $terciario;
         border: solid 2px $secundario;
         border-radius: 2px;
-        width: 120px;
         display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        height: 20px;
+        align-items: map-get($estilos, centro);
+        justify-content: map-get($estilos, centro);
+        @include tamanio (120px, 20px);
     }
 }
 
@@ -94,15 +103,14 @@ nav img {
         margin-bottom: 8px;  
     }
     button {
-        cursor: pointer;
+        cursor: map-get($estilos , cursor );
         background-color: $terciario;
         border: solid 2px $secundario;
         border-radius: 2px;
-        width: 125px;
-        height: 20px;
+        @include tamanio (125px, 20px);
         display: inline-flex;
-        align-items: center;
-        justify-content: center;
+        align-items: map-get($estilos, centro);
+        justify-content: map-get($estilos, centro);
         font-size: small;
     }  
     .subtitulo {
@@ -116,15 +124,14 @@ nav img {
 .titulo {
     margin-bottom: 50px;
     font-size: 25px;
-    font-weight: bolder;
+    font-weight: map-get($estilos, negrita);
 }
 
 .libro {
     display: inline-block;
     margin-right: 29px;
-    width: 150px;
-    height: 350px;
-    cursor: pointer;
+    @include tamanio (150px, 350px);
+    cursor: map-get($estilos , cursor );
     /* No puedo hacer que todas sus posiciones sean a la misma altura */
     &:hover {
         transform: scale(1.06);
@@ -140,8 +147,7 @@ nav img {
         background-color:$terciario;
         content: '';
         position: absolute;
-        width: 86vw;
-        height: 25%;
+        @include tamanio (86vw, 25%);
         bottom: -25px;
         left: 0;
         z-index: -1;
@@ -160,35 +166,33 @@ nav img {
         margin-bottom: 8px;
     }
     button {
-        cursor: pointer;
+        cursor: map-get($estilos , cursor );
         background-color: $terciario;
         border: solid 2px $secundario;
         border-radius: 2px;
-        width: 125px;
-        height: 20px;
+        @include tamanio (125px, 20px);
         display: inline-flex;
-        align-items: center;
-        justify-content: center;
+        align-items: map-get($estilos, centro);
+        justify-content: map-get($estilos, centro);
         font-size: small;
     }
 }
 
 .vertododiv {
-    text-align: center;
+    text-align: map-get($estilos, centro);
     margin: 50px;
     grid-area: vertododiv;
     width: auto;
     .vertodobutton {
         display: inline-flex;
-        width: 100px;
-        height: 30px;
+        @include tamanio (100px, 30px);
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         background-color: $primario;
         font-size: 15px;
-        align-items: center;
-        justify-content: center;
-        font-weight: bolder;
-        cursor: pointer;
+        align-items: map-get($estilos, centro);
+        justify-content: map-get($estilos, centro);
+        font-weight: map-get($estilos, negrita);
+        cursor: map-get($estilos , cursor );
         text-transform: uppercase;
         border: solid 2px $terciario;
         border-radius: 2px;
@@ -212,8 +216,7 @@ nav img {
     justify-content: space-between;
     flex-wrap: wrap;
     box-sizing: border-box;
-    height: auto;
-    width: auto;
+    @include tamanio (auto, auto);
     grid-area: footer;
     .footer-left-content {
         display: block;
@@ -223,11 +226,10 @@ nav img {
             margin-top: 30px ;
         }
         img {
-            width: 200px;
-            height: 50px;
+            @include tamanio (200px, 50px);
         }
         h3 {
-            text-align: center;
+            text-align: map-get($estilos, centro);
             color: rgb(212, 209, 209);
             margin-top: 20px;
             margin-bottom: 10px;
@@ -320,7 +322,7 @@ nav img {
             .formOption {
                 margin-top: 20px;
                 margin-bottom: 15px;
-                cursor: pointer;
+                cursor: map-get($estilos , cursor );
             }
         }
         .formButtom {
@@ -329,7 +331,7 @@ nav img {
             width: 100px;
             margin-right: 20px;
             display: inline-block;
-            cursor: pointer;
+            cursor: map-get($estilos , cursor );
         }
     }
 }
@@ -372,8 +374,7 @@ nav img {
                     }
                     .form-control {
                         display: block;
-                        width: 100%;
-                        height: 34px;
+                        @include tamanio (100%, 34px);
                         padding: 6px 12px;
                         font-size: 14px;
                         line-height: 1.5;
@@ -384,24 +385,22 @@ nav img {
                         box-shadow: inset 0 1px 1px $secundario;
                     }
                     .palabra {
-                        width: 100%;
-                        height: 35px;
+                        @include tamanio (100%, 35px);
                         margin-top: 10px;
                     }
                     .filter-button {
-                        width: 100%;
                         line-height: 40px;
-                        height: 40px;
+                        @include tamanio (100%, 40px);
                         padding: 0 1.7rem;
                         border: 0;
                         margin: 0;
                         background: $terciario;
                         color: #fff;
                         text-decoration: none;
-                        text-align: center;
+                        text-align: map-get($estilos, centro);
                         border-radius: .6rem;
                         min-width: 14rem;
-                        cursor: pointer;
+                        cursor: map-get($estilos , cursor );
                         font-weight: bold;
                         box-shadow: none;
                         display: inline-block;
@@ -421,11 +420,11 @@ nav img {
     margin-left: 30px;
     padding: 1px;
     .libro {
+        @extend .libro;
         display: inline-block;
-        margin-right: 35px;
+        margin-right: 29px;
         margin-bottom: 30px;
         width: 130px;
-        height: 350px;
     }
     .spantitulo::after {
         width: 900px;
@@ -484,8 +483,7 @@ nav img {
     }
 
     footer {
-        width: auto;
-        height: auto;
+        @include tamanio (auto, auto);
         .footer-right-content {
             float: left;
             margin-left: 20px;
@@ -565,8 +563,7 @@ nav img {
     }
 
     footer {
-        width: auto;    
-        height: auto;
+        @include tamanio (auto, auto);
         .footer-right-content {
             float: left;
             margin-left: 20px;

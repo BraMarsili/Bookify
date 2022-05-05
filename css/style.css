@@ -66,10 +66,10 @@ nav img {
   background-color: #2abdbb;
   border: solid 2px white;
   border-radius: 2px;
-  width: 120px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  width: 120px;
   height: 20px;
 }
 
@@ -107,7 +107,7 @@ nav img {
   font-weight: bolder;
 }
 
-.libro {
+.libro, .vendido .libro {
   display: inline-block;
   margin-right: 29px;
   width: 150px;
@@ -198,8 +198,8 @@ nav img {
   justify-content: space-between;
   flex-wrap: wrap;
   box-sizing: border-box;
-  height: auto;
   width: auto;
+  height: auto;
   grid-area: footer;
 }
 .main-footer .footer-left-content {
@@ -378,8 +378,8 @@ nav img {
   margin-top: 10px;
 }
 .aside-vendido .aside-vendido-search .aside-content .filter-menu .form-group .filter-button {
-  width: 100%;
   line-height: 40px;
+  width: 100%;
   height: 40px;
   padding: 0 1.7rem;
   border: 0;
@@ -407,10 +407,9 @@ nav img {
 }
 .vendido .libro {
   display: inline-block;
-  margin-right: 35px;
+  margin-right: 29px;
   margin-bottom: 30px;
   width: 130px;
-  height: 350px;
 }
 .vendido .spantitulo::after {
   width: 900px;
@@ -441,7 +440,7 @@ nav img {
     margin-right: 30px;
   }
 
-  .libro {
+  .libro, .vendido .libro {
     margin-right: 55px;
   }
 
@@ -509,7 +508,7 @@ nav img {
     margin-right: 30px;
   }
 
-  .libro {
+  .libro, .vendido .libro {
     margin-right: 30px;
     margin-bottom: 15px;
   }
