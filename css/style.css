@@ -73,6 +73,10 @@ nav img {
   height: 20px;
 }
 
+.main {
+  display: inline-block;
+}
+
 .section2 {
   margin: 30px 80px 30px 80px;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
@@ -100,32 +104,16 @@ nav img {
   margin-bottom: 40px;
   margin-top: 40px;
 }
-
-.titulo {
+.section2 .titulo {
   margin-bottom: 50px;
   font-size: 25px;
   font-weight: bolder;
 }
-
-.libro, .vendido .libro {
-  display: inline-block;
-  margin-right: 29px;
-  width: 150px;
-  height: 350px;
-  cursor: pointer;
-  /* No puedo hacer que todas sus posiciones sean a la misma altura */
-}
-.libro:hover {
-  transform: scale(1.06);
-  transition-property: all;
-  transition-duration: 0.3s;
-}
-
-.spantitulo {
+.section2 .spantitulo {
   position: relative;
   /* Subrayado con CSS (Utilizar span en lo que se quiera subrayar) */
 }
-.spantitulo::after {
+.section2 .spantitulo::after {
   background-color: #2abdbb;
   content: "";
   position: absolute;
@@ -135,28 +123,18 @@ nav img {
   left: 0;
   z-index: -1;
 }
-
-.section3 {
-  margin: 30px 80px 30px 80px;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  grid-area: section3;
-  width: auto;
-}
-.section3 p {
-  margin-top: 8px;
-  margin-bottom: 8px;
-}
-.section3 button {
+.section2 .libro {
+  display: inline-block;
+  margin-right: 29px;
+  width: 150px;
+  height: 350px;
   cursor: pointer;
-  background-color: #2abdbb;
-  border: solid 2px white;
-  border-radius: 2px;
-  width: 125px;
-  height: 20px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-size: small;
+  /* No puedo hacer que todas sus posiciones sean a la misma altura */
+}
+.section2 .libro:hover {
+  transform: scale(1.06);
+  transition-property: all;
+  transition-duration: 0.3s;
 }
 
 .vertododiv {
@@ -411,8 +389,19 @@ nav img {
   margin-bottom: 30px;
   width: 130px;
 }
-.vendido .spantitulo::after {
-  width: 900px;
+.vendido .spantitulo2 {
+  position: relative;
+  /* Subrayado con CSS (Utilizar span en lo que se quiera subrayar) */
+}
+.vendido .spantitulo2::after {
+  background-color: #2abdbb;
+  content: "";
+  position: absolute;
+  width: 65vw;
+  height: 25%;
+  bottom: -25px;
+  left: 0;
+  z-index: -1;
 }
 
 @media (max-width: 480px) {
@@ -424,7 +413,7 @@ nav img {
     width: auto;
   }
 
-  .body-index {
+  .content-fluid {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas: "header" "section1" "section2" "section3" "vertododiv" "footer";
@@ -439,19 +428,12 @@ nav img {
     margin-left: 30px;
     margin-right: 30px;
   }
-
-  .libro, .vendido .libro {
+  .section2 .libro {
     margin-right: 55px;
   }
 
-  .body-index .spantitulo::after {
+  .content-fluid .spantitulo::after {
     width: 86vw;
-  }
-
-  .section3 {
-    width: auto;
-    margin-left: 30px;
-    margin-right: 30px;
   }
 
   .vertododiv {
@@ -468,7 +450,7 @@ nav img {
     margin-left: 20px;
   }
 
-  .body-vendido {
+  .content-fluid-vendido {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas: "header" "aside" "section2" "footer";
@@ -479,8 +461,8 @@ nav img {
     margin-right: 55px;
   }
 
-  .vendido .spantitulo::after {
-    width: 425px;
+  .vendido .spantitulo2::after {
+    width: 86vw;
   }
 }
 @media (max-width: 480px) and (max-width: 900px) {
@@ -492,7 +474,7 @@ nav img {
     width: auto;
   }
 
-  .body-index {
+  .content-fluid {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas: "header" "section1" "section2" "section3" "vertododiv" "footer";
@@ -507,20 +489,13 @@ nav img {
     margin-left: 30px;
     margin-right: 30px;
   }
-
-  .libro, .vendido .libro {
+  .section2 .libro {
     margin-right: 30px;
     margin-bottom: 15px;
   }
 
-  .body-index .spantitulo::after {
+  .content-fluid .spantitulo::after {
     width: 86vw;
-  }
-
-  .section3 {
-    width: auto;
-    margin-left: 30px;
-    margin-right: 30px;
   }
 
   .vertododiv {

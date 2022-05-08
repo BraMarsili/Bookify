@@ -93,6 +93,10 @@ nav img {
     }
 }
 
+.main {
+    display: inline-block;
+}
+
 .section2 {
     margin: 30px 80px 30px 80px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -118,63 +122,35 @@ nav img {
         margin-bottom: 40px;
         margin-top: 40px;
     }
-    
-}
-
-.titulo {
-    margin-bottom: 50px;
-    font-size: 25px;
-    font-weight: map-get($estilos, negrita);
-}
-
-.libro {
-    display: inline-block;
-    margin-right: 29px;
-    @include tamanio (150px, 350px);
-    cursor: map-get($estilos , cursor );
-    /* No puedo hacer que todas sus posiciones sean a la misma altura */
-    &:hover {
-        transform: scale(1.06);
-        transition-property: all;
-        transition-duration: .3s;
+    .titulo {
+        margin-bottom: 50px;
+        font-size: 25px;
+        font-weight: map-get($estilos, negrita);
     }
-}
-
-
-.spantitulo {
-    position: relative;
-    &::after {
-        background-color:$terciario;
-        content: '';
-        position: absolute;
-        @include tamanio (86vw, 25%);
-        bottom: -25px;
-        left: 0;
-        z-index: -1;
+    .spantitulo {
+        position: relative;
+        &::after {
+            background-color:$terciario;
+            content: '';
+            position: absolute;
+            @include tamanio (86vw, 25%);
+            bottom: -25px;
+            left: 0;
+            z-index: -1;
+        }
+        /* Subrayado con CSS (Utilizar span en lo que se quiera subrayar) */
     }
-    /* Subrayado con CSS (Utilizar span en lo que se quiera subrayar) */
-}
-
-
-.section3 {
-    margin: 30px 80px 30px 80px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    grid-area: section3;
-    width: auto;
-    p {
-        margin-top: 8px;
-        margin-bottom: 8px;
-    }
-    button {
+    .libro {
+        display: inline-block;
+        margin-right: 29px;
+        @include tamanio (150px, 350px);
         cursor: map-get($estilos , cursor );
-        background-color: $terciario;
-        border: solid 2px $secundario;
-        border-radius: 2px;
-        @include tamanio (125px, 20px);
-        display: inline-flex;
-        align-items: map-get($estilos, centro);
-        justify-content: map-get($estilos, centro);
-        font-size: small;
+        /* No puedo hacer que todas sus posiciones sean a la misma altura */
+        &:hover {
+            transform: scale(1.06);
+            transition-property: all;
+            transition-duration: .3s;
+        }
     }
 }
 
@@ -426,8 +402,18 @@ nav img {
         margin-bottom: 30px;
         width: 130px;
     }
-    .spantitulo::after {
-        width: 900px;
+    .spantitulo2 {
+        position: relative;;
+        &::after {
+            background-color:$terciario;
+            content: '';
+            position: absolute;
+            @include tamanio (65vw, 25%);
+            bottom: -25px;
+            left: 0;
+            z-index: -1;
+        }
+        /* Subrayado con CSS (Utilizar span en lo que se quiera subrayar) */
     }
 }
 
@@ -441,7 +427,7 @@ nav img {
         width: auto;
     }
 
-    .body-index {
+    .content-fluid {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-areas: 
@@ -461,20 +447,13 @@ nav img {
         width: auto;
         margin-left: 30px;
         margin-right: 30px;
+        .libro {
+            margin-right: 55px;
+        }
     }
 
-    .libro {
-        margin-right: 55px;
-    }
-
-    .body-index .spantitulo::after {
+    .content-fluid .spantitulo::after {
         width: 86vw;
-    }
-
-    .section3 {
-        width: auto;
-        margin-left: 30px;
-        margin-right: 30px;
     }
 
     .vertododiv {
@@ -490,7 +469,7 @@ nav img {
         }
     }
 
-    .body-vendido {
+    .content-fluid-vendido {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-areas: 
@@ -505,8 +484,8 @@ nav img {
         margin-right: 55px;
     }
 
-    .vendido .spantitulo::after {
-        width: 425px;
+    .vendido .spantitulo2::after {
+        width: 86vw;
     }
 }
 
@@ -520,7 +499,7 @@ nav img {
         width: auto;
     }
 
-    .body-index {
+    .content-fluid {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-areas: 
@@ -540,21 +519,14 @@ nav img {
         width: auto;
         margin-left: 30px;
         margin-right: 30px;
+        .libro {
+            margin-right: 30px;
+            margin-bottom: 15px;
+        }
     }
 
-    .libro {
-        margin-right: 30px;
-        margin-bottom: 15px;
-    }
-
-    .body-index .spantitulo::after {
+    .content-fluid .spantitulo::after {
         width: 86vw;
-    }
-
-    .section3 {
-        width: auto;
-        margin-left: 30px;
-        margin-right: 30px;
     }
 
     .vertododiv {
