@@ -16,7 +16,7 @@ body {
   grid-template-areas: "header header" "section1 section1" "section2 section2" "section3 section3" "vertododiv vertododiv" "footer footer";
 }
 
-.content-fluid-vendido {
+.content-fluid-explorar {
   display: grid;
   grid-template-columns: 300px 2fr;
   grid-template-areas: "header header header" "aside section2 section2" "footer footer footer";
@@ -123,18 +123,22 @@ nav img {
   left: 0;
   z-index: -1;
 }
-.section2 .libro {
+.section2 .libro, .section2 .libro-largo {
   display: inline-block;
-  margin-right: 29px;
+  margin-right: 20px;
+  margin-bottom: 2vw;
   width: 150px;
   height: 350px;
   cursor: pointer;
   /* No puedo hacer que todas sus posiciones sean a la misma altura */
 }
-.section2 .libro:hover {
+.section2 .libro:hover, .section2 .libro-largo:hover {
   transform: scale(1.06);
   transition-property: all;
   transition-duration: 0.3s;
+}
+.section2 .libro-largo {
+  font-size: 14px;
 }
 
 .vertododiv {
@@ -296,7 +300,7 @@ nav img {
   cursor: pointer;
 }
 
-.aside-vendido {
+.aside-explorar {
   margin-top: 20px;
   width: 100%;
   float: left;
@@ -306,12 +310,12 @@ nav img {
   grid-area: aside;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
-.aside-vendido h2 {
+.aside-explorar h2 {
   margin: 0;
   padding: 1rem 0;
   border-bottom: 1px solid rgb(54, 57, 57);
 }
-.aside-vendido .aside-vendido-search {
+.aside-explorar .aside-explorar-search {
   padding: 0.5rem 1rem;
   margin: 0.5rem;
   background-color: rgb(54, 57, 57);
@@ -319,25 +323,25 @@ nav img {
   margin-left: 0;
   box-sizing: border-box;
 }
-.aside-vendido .aside-vendido-search .aside-content {
+.aside-explorar .aside-explorar-search .aside-content {
   padding-top: 1rem;
   box-sizing: border-box;
 }
-.aside-vendido .aside-vendido-search .aside-content .filter-menu {
+.aside-explorar .aside-explorar-search .aside-content .filter-menu {
   box-sizing: border-box;
 }
-.aside-vendido .aside-vendido-search .aside-content .filter-menu .form-group {
+.aside-explorar .aside-explorar-search .aside-content .filter-menu .form-group {
   margin-bottom: 1rem;
   box-sizing: border-box;
 }
-.aside-vendido .aside-vendido-search .aside-content .filter-menu .form-group label {
+.aside-explorar .aside-explorar-search .aside-content .filter-menu .form-group label {
   display: inline-block;
   max-width: 100%;
   margin-bottom: 5px;
   font-weight: bold;
   font-size: small;
 }
-.aside-vendido .aside-vendido-search .aside-content .filter-menu .form-group .form-control {
+.aside-explorar .aside-explorar-search .aside-content .filter-menu .form-group .form-control {
   display: block;
   width: 100%;
   height: 34px;
@@ -350,12 +354,12 @@ nav img {
   border-radius: 0;
   box-shadow: inset 0 1px 1px white;
 }
-.aside-vendido .aside-vendido-search .aside-content .filter-menu .form-group .palabra {
+.aside-explorar .aside-explorar-search .aside-content .filter-menu .form-group .palabra {
   width: 100%;
   height: 35px;
   margin-top: 10px;
 }
-.aside-vendido .aside-vendido-search .aside-content .filter-menu .form-group .filter-button {
+.aside-explorar .aside-explorar-search .aside-content .filter-menu .form-group .filter-button {
   line-height: 40px;
   width: 100%;
   height: 40px;
@@ -373,27 +377,27 @@ nav img {
   box-shadow: none;
   display: inline-block;
 }
-.aside-vendido .aside-vendido-search .aside-content .filter-menu .form-group .filter-button:hover {
+.aside-explorar .aside-explorar-search .aside-content .filter-menu .form-group .filter-button:hover {
   transform: scale(1.06);
   transition-property: all;
   transition: 0.3s;
 }
 
-.vendido {
+.explorar {
   margin-left: 30px;
   padding: 1px;
 }
-.vendido .libro {
+.explorar .libro, .explorar .section2 .libro-largo, .section2 .explorar .libro-largo {
   display: inline-block;
   margin-right: 29px;
   margin-bottom: 30px;
   width: 130px;
 }
-.vendido .spantitulo2 {
+.explorar .spantitulo2 {
   position: relative;
   /* Subrayado con CSS (Utilizar span en lo que se quiera subrayar) */
 }
-.vendido .spantitulo2::after {
+.explorar .spantitulo2::after {
   background-color: #2abdbb;
   content: "";
   position: absolute;
@@ -428,7 +432,7 @@ nav img {
     margin-left: 30px;
     margin-right: 30px;
   }
-  .section2 .libro {
+  .section2 .libro, .section2 .libro-largo {
     margin-right: 55px;
   }
 
@@ -450,22 +454,22 @@ nav img {
     margin-left: 20px;
   }
 
-  .content-fluid-vendido {
+  .content-fluid-explorar {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas: "header" "aside" "section2" "footer";
     gap: 1px;
   }
 
-  .vendido .libro {
+  .explorar .libro, .explorar .section2 .libro-largo, .section2 .explorar .libro-largo {
     margin-right: 55px;
   }
 
-  .vendido .spantitulo2::after {
+  .explorar .spantitulo2::after {
     width: 86vw;
   }
 }
-@media (max-width: 480px) and (max-width: 900px) {
+@media (min-width: 480px) and (max-width: 900px) {
   body {
     width: auto;
   }
@@ -489,7 +493,7 @@ nav img {
     margin-left: 30px;
     margin-right: 30px;
   }
-  .section2 .libro {
+  .section2 .libro, .section2 .libro-largo {
     margin-right: 30px;
     margin-bottom: 15px;
   }
@@ -501,6 +505,21 @@ nav img {
   .vertododiv {
     width: auto;
     margin: 40px 5px 40px 5px;
+  }
+
+  .content-fluid-explorar {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "header" "aside" "section2" "footer";
+    gap: 1px;
+  }
+
+  .explorar .libro, .explorar .section2 .libro-largo, .section2 .explorar .libro-largo {
+    margin-right: 55px;
+  }
+
+  .explorar .spantitulo2::after {
+    width: 86vw;
   }
 
   footer {

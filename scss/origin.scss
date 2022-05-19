@@ -35,7 +35,7 @@ body {
     "footer footer";
 }
 
-.content-fluid-vendido {
+.content-fluid-explorar {
     display: grid;
     grid-template-columns: 300px 2fr;
     grid-template-areas: 
@@ -142,7 +142,8 @@ nav img {
     }
     .libro {
         display: inline-block;
-        margin-right: 29px;
+        margin-right: 20px;
+        margin-bottom: 2vw;
         @include tamanio (150px, 350px);
         cursor: map-get($estilos , cursor );
         /* No puedo hacer que todas sus posiciones sean a la misma altura */
@@ -151,6 +152,10 @@ nav img {
             transition-property: all;
             transition-duration: .3s;
         }
+    }
+    .libro-largo {
+        @extend .libro;
+        font-size: 14px;
     }
 }
 
@@ -312,7 +317,7 @@ nav img {
     }
 }
 
-.aside-vendido {
+.aside-explorar {
     margin-top: 20px;
     width: 100%;
     float: left;
@@ -326,7 +331,7 @@ nav img {
         padding: 1rem 0;
         border-bottom: 1px solid rgb(54,57,57) ;
     }
-    .aside-vendido-search {
+    .aside-explorar-search {
         padding: .5rem 1rem;
         margin: .5rem;
         background-color: rgb(54,57,57);
@@ -392,7 +397,7 @@ nav img {
     }
 }
 
-.vendido {
+.explorar {
     margin-left: 30px;
     padding: 1px;
     .libro {
@@ -469,7 +474,7 @@ nav img {
         }
     }
 
-    .content-fluid-vendido {
+    .content-fluid-explorar {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-areas: 
@@ -480,16 +485,16 @@ nav img {
         gap: 1px;
     }
 
-    .vendido .libro {
+    .explorar .libro {
         margin-right: 55px;
     }
 
-    .vendido .spantitulo2::after {
+    .explorar .spantitulo2::after {
         width: 86vw;
     }
 }
 
-@media(max-width:480px) and (max-width:900px) {
+@media(min-width:480px) and (max-width:900px) {
 
     body {
         width: auto;
@@ -532,6 +537,25 @@ nav img {
     .vertododiv {
         width: auto;
         margin: 40px 5px 40px 5px;
+    }
+
+    .content-fluid-explorar {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "header"
+        "aside"
+        "section2"
+        "footer";
+        gap: 1px;
+    }
+
+    .explorar .libro {
+        margin-right: 55px;
+    }
+
+    .explorar .spantitulo2::after {
+        width: 86vw;
     }
 
     footer {
