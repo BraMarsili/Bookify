@@ -45,6 +45,16 @@ body {
     gap: 1px;
 }
 
+.content-fluid-book {
+    display: grid;
+    grid-template-columns: 75% 25%;
+    grid-template-areas: 
+    "header header"
+    "book aside"
+    "footer footer";
+    gap: 1px;
+}
+
 header {
     grid-area: header;
     width: auto;
@@ -75,6 +85,10 @@ nav img {
             transform: scale(1.1);
             transition-property: all;
             transition-duration: .3s;
+        }
+        a {
+            text-decoration: none;
+            color: $secundario;
         }
     }
     p {
@@ -152,10 +166,18 @@ nav img {
             transition-property: all;
             transition-duration: .3s;
         }
+        a {
+            text-decoration: none;
+            color: $secundario;
+        }
     }
     .libro-largo {
         @extend .libro;
         font-size: 14px;
+        a {
+            text-decoration: none;
+            color: $secundario;
+        }
     }
 }
 
@@ -422,6 +444,85 @@ nav img {
     }
 }
 
+.book-block {
+    margin: 3vw 1vw 2vw;
+    padding: 1vw;
+    display: flex;
+    box-sizing: border-box;
+    background-color: rgb(54, 57, 57);
+    box-shadow: 0.1rem 0.1rem 0.2rem white;
+    grid-area: book;
+    .book-img {
+        margin-right: 1vw;
+        img {
+            height: auto;
+            width: auto;
+        }
+    }
+    .book-info {
+        h1 {
+            font-size: 2.4vw;
+            padding-bottom: 2vw;
+        }
+        .stars-rate {
+            padding-bottom: 1vw;
+            span {
+                cursor: map-get($estilos, cursor);
+            }
+        }
+    }
+}
+
+.book-aside {
+    height: auto;
+    grid-area: aside;
+    .aside-tool {
+        @extend .book-block;
+        display: block;
+        height: auto;
+        h2 {
+            color: #ff0072;
+            height: auto;
+        }
+        div {
+            display: flex;
+            margin-top: 1vw;
+            justify-content: center;
+            align-items: center;
+            height: auto;
+            i {
+                padding-right: 1vw;
+                height: 2.5vw;
+            }
+        }
+        button {
+            line-height: 40px;
+            @include tamanio (100%, 40px);
+            padding: 0 1.7rem;
+            border: 0;
+            margin: 0;
+            background: $terciario;
+            color: #fff;
+            height: auto;
+            text-decoration: none;
+            text-align: map-get($estilos, centro);
+            border-radius: .6rem;
+            min-width: auto;
+            cursor: map-get($estilos , cursor );
+            font-weight: bold;
+            box-shadow: none;
+            display: inline-block;
+            &:hover {
+                transform: scale(1.05);
+                transition-property: all;
+                transition: .3s;
+            }
+        }
+    }
+}
+
+
+
 @media(max-width:480px) {
 
     body {
@@ -492,6 +593,17 @@ nav img {
     .explorar .spantitulo2::after {
         width: 86vw;
     }
+    
+    .content-fluid-book {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "header"
+        "book"
+        "aside"
+        "footer";
+        gap: 1px;
+    }   
 }
 
 @media(min-width:480px) and (max-width:900px) {
@@ -564,6 +676,16 @@ nav img {
             float: left;
             margin-left: 20px;
         }
-    
+    }
+
+    .content-fluid-book {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "header"
+        "book"
+        "aside"
+        "footer";
+        gap: 1px;
     }
 }
