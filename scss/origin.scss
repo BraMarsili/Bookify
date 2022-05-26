@@ -308,33 +308,19 @@ nav img {
         margin-bottom: 20px;
     }
     form {
-        select, textarea {
-            display: block;
+        .form-check {
+            margin-top: 1vw;
+        }
+        .form-select {
+            width: auto;
             margin-top: 8px;
             margin-bottom: 15px;
         }
-        .formInput {
-            margin-top: 8px;
-            margin-bottom: 15px;
-            width: 200px;
-            display: block;
+        .form-control {
+            width: auto;
         }
-        .formOption-div {
-            width: 50px;
-            display: inline-block;
-            .formOption {
-                margin-top: 20px;
-                margin-bottom: 15px;
-                cursor: map-get($estilos , cursor );
-            }
-        }
-        .formButtom {
-            margin-top: 8px;
-            margin-bottom: 10px;
-            width: 100px;
-            margin-right: 20px;
-            display: inline-block;
-            cursor: map-get($estilos , cursor );
+        button {
+            margin-right: 4vw;
         }
     }
 }
@@ -603,7 +589,7 @@ nav img {
         "aside"
         "footer";
         gap: 1px;
-    }   
+    }
 }
 
 @media(min-width:480px) and (max-width:900px) {

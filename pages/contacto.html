@@ -52,31 +52,40 @@
             <p>Completa los suientes datos:</p>
         </div>
         <form>
-            <label for="nombre">Nombre</label>
-            <input class="formInput" type="text" placeholder="Ingrese su nombre">
-            <label for="correo_electronico">Correo Electrónico</label>
-            <input  class="formInput" type="text" placeholder="Ingrese su Correo Electrónico">
-            <label for="problema">Elija el motivo</label>
-            <select name="problema">
-                <option value="" label="Elija su opción">Elija su opción</option>
-                <option value="facturación">Problemas con facturación</option>
-                <option value="otro">Otro</option>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Nombre</label>
+            <input type="nombre" class="form-control" id="exampleFormControlInput1" placeholder="John Doe">
+          </div>
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Email</label>
+              <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+            </div>            
+            <label for="exampleFormControlInput1" class="form-label">Elija el motivo</label>
+            <select class="form-select" aria-label="Default select example">
+              <option selected>Elija el su opción</option>
+              <option value="1">Problemas con facturación</option>
+              <option value="2">Problema con el envío</option>
+              <option value="3">Otro</option>
             </select>
-            <label for="mensaje">Su mensaje</label>
-            <textarea name="mensaje" id="" cols="30" rows="5" placeholder="Ingrese su mensaje"></textarea>
-            <label for="notificación">¿Desea recibir una notificación cuando le hayamos respondido?</label>
-            <br>
-            <div class="formOption-div">
-                <input class="formOption" type="radio" name="si" value="si">
+            <div class="mb-3">
+              <label for="exampleFormControlTextarea1" class="form-label">Su mensaje</label>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+            <label for="exampleFormControlInput1" class="form-label">¿Desea recibir una notificación cuando le hayamos respondido?</label>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <label class="form-check-label" for="flexCheckDefault">
                 Si
+              </label>
             </div>
-            <div class="formOption-div">
-                <input class="formOption" type="radio" name="no" value="no">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <label class="form-check-label" for="flexCheckDefault">
                 No
+              </label>
             </div>
-            <br>
-            <input class="formButtom" type="submit" value="Enviar">
-            <input class="formButtom" type="reset" value="Borrar">
+            <button type="submit" class="btn btn-outline-light">Enviar</button>
+            <button type="reset" class="btn btn-outline-light">Borrar</button>
         </form>
     </section>
     <footer class="main-footer">

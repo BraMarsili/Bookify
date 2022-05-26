@@ -290,33 +290,19 @@ nav img {
 .sectionForm div {
   margin-bottom: 20px;
 }
-.sectionForm form select, .sectionForm form textarea {
-  display: block;
+.sectionForm form .form-check {
+  margin-top: 1vw;
+}
+.sectionForm form .form-select {
+  width: auto;
   margin-top: 8px;
   margin-bottom: 15px;
 }
-.sectionForm form .formInput {
-  margin-top: 8px;
-  margin-bottom: 15px;
-  width: 200px;
-  display: block;
+.sectionForm form .form-control {
+  width: auto;
 }
-.sectionForm form .formOption-div {
-  width: 50px;
-  display: inline-block;
-}
-.sectionForm form .formOption-div .formOption {
-  margin-top: 20px;
-  margin-bottom: 15px;
-  cursor: pointer;
-}
-.sectionForm form .formButtom {
-  margin-top: 8px;
-  margin-bottom: 10px;
-  width: 100px;
-  margin-right: 20px;
-  display: inline-block;
-  cursor: pointer;
+.sectionForm form button {
+  margin-right: 4vw;
 }
 
 .aside-explorar {
